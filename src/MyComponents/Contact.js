@@ -2,6 +2,7 @@ import React ,{useRef} from 'react'
 import img_x from './../images/contact.jpg'
 // import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import feedimg from './../images/feedback.png'
 
 const Contact = () => {
   const form = useRef();
@@ -56,7 +57,7 @@ const Contact = () => {
         <section class="text-gray-600 body-font relative">
     <div class="container px-5 py-4 mx-auto flex sm:flex-nowrap flex-wrap">
         <div class=" lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 mt-2 md:mb-0">
-            <img class=" object-cover object-center rounded" alt="hero" src={img_x}></img>
+            <img class=" object-cover object-center rounded" alt="hero" src={feedimg}></img>
         </div>
     <div class=" lg:w-1/2 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8  md:mt-0">
       <h2 class="text-black text-2xl text-center mb-1 font-bold title-font">Feedback Form</h2>

@@ -14,11 +14,10 @@ function Aboutus() {
         <img src={bg} width={"100%"} height="600" class="acc1"></img>
         <div class="position-relative"></div>
         <div class="position-absolute top-50 start-50 translate-middle">
-          {/* <p class="text-blue-700 display-6 fw-semibold my-1">For One and All</p> */}
+        {/* <p class="text-blue-700 display-6 fw-semibold my-1">For One and All</p> */}
         </div>
       </div>
       <About1/>
-      <About2/>
       <Footer/>
     </div>
   );

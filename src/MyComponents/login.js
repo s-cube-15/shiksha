@@ -66,7 +66,7 @@ function Login() {
             <img
               className="mx-auto h-12 w-auto"
               src={logo}
-              alt="Your Company"
+              alt="Shiksha Logo"
             />
             <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
               Sign in to your account
@@ -74,7 +74,7 @@ function Login() {
             <p className="mt-2 text-center text-sm text-gray-600">
               And{' '}
               <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                Access to the courses
+                Get access to the courses
               </a>
             </p>
           </div>
@@ -82,7 +82,7 @@ function Login() {
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="-space-y-px rounded-md shadow-sm">
               <div>
-                <label htmlFor="email-address" className="sr-only">
+                <label className="sr-only">
                   Email address
                 </label>
                 <input
@@ -98,7 +98,7 @@ function Login() {
                 />
               </div>
               <div>
-                <label htmlFor="password" className="sr-only">
+                <label className="sr-only">
                   Password
                 </label>
                 <input
@@ -128,15 +128,15 @@ function Login() {
                 </label>
               </div>
 
-              <div className="text-sm">
+              {/* <div className="text-sm">
                 <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
                   Forgot your password?
                 </a>
-              </div>
+              </div> */}
             </div>
 
             <div>
-              <button
+              {/* <button
                 type="submit"
                 className="group relative flex w-full justify-center rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 onMouseOver={() => speak({ text: acc })}
@@ -146,7 +146,9 @@ function Login() {
                   <LockClosedIcon className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
                 </span>
                 Sign in
-              </button>
+              </button> */}
+              <button onMouseOver={() => speak({ text: acc })} className="bg-transparent  hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={signUp}>Create account</button> 
+              <button onMouseOver={() => speak({ text: signin })} className="bg-transparent mt-2 mb-2 ml-2 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick={signIn}>Sign in</button>
             </div>
           </form>
         </div>

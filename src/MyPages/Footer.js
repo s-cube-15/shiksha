@@ -5,7 +5,7 @@ import {Link,NavLink} from "react-router-dom"
 const Footer = () => {
   return (
     <div>
-    <div className='w-screen bg-blue-600  py-6 px-4 grid lg:grid-cols-2 gap-30 text-gray-200'>
+    <div className='w-screen bg-gradient-to-r from-sky-900 to-indigo-900  py-6 px-4 grid lg:grid-cols-2 gap-30 text-gray-200'>
         <div>
             <h1 className='w-full  text-3xl font-bold'>SHIKSHA</h1>
             <p className=''>
@@ -49,7 +49,7 @@ const Footer = () => {
       </div>
      </div>    
     </div>
-    <div class="bg-blue-600 w-full  pb-2">
+    <div class="bg-gradient-to-r from-sky-900 to-indigo-900 w-full  pb-2">
       </div>
     </div>
     

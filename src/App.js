@@ -24,6 +24,7 @@ import React, { useState } from 'react';
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
+import Lead from "./MyComponents/leaders"
 import Login from './MyComponents/login'
 // Contains the value and text for the options
 const languages = [
@@ -104,14 +105,14 @@ function App() {
     <Route path="/video" element={<Videos/>} />
     <Route path="/videos" element={<Videos/>} />
     <Route path="/login" element={<Login/>}/>
-    
+    <Route path="/leaders" element={<Lead/>}/>
     {redirect}
   
   </Routes>
-  
+{/*   
   <h2 id="transcript" className='text-black'>Transcript: {transcript}</h2>
 
-      <button onClick={SpeechRecognition.startListening}>Start</button>
+      <button onClick={SpeechRecognition.startListening}>Start</button> */}
    </div>
    </Router>
    
