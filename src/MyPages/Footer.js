@@ -11,7 +11,7 @@ const Footer = () => {
             <p className=''>
             Shiksha is designed in such a way that it is accessible to students with various difficulties, like visual, auditory etc. Our platform will have features like captioning, audio to text, screen reading and many more. Shiksha will foster an inclusive learning environment by promoting diversity and acceptance. Visual aids like pictures, diagrams, and videos can make thoughts and ideas easier to understand for nonverbal or non-speaking people.
 </p>
-            <div className='flex justify-start'>
+            <div className='flex justify-start mt-4'>
                 <FaFacebookSquare size={30}/>
                 <FaLinkedin size={30}/>
                 <FaInstagramSquare size={30}/>
@@ -23,7 +23,7 @@ const Footer = () => {
         <h2 className="title-font font-medium text-white text-lg mb-3 underline">Quick Links</h2>
         <nav className="list-none gap-2 mb-6">
           <li>
-            <a className="text-white hover:text-gray-800 p-2 mb-4 no-underline">About </a>
+            <a className="text-white hover:text-gray-800 p-2 no-underline">About </a>
           </li>
           <li>
             <a className="text-white hover:text-gray-800 p-2 no-underline"><Link to="/headlines" class="nav-link active">Headlines</Link></a>
@@ -33,23 +33,23 @@ const Footer = () => {
           </li>
         </nav>
       </div>
-      <div className="lg:w-1/4 md:w-1/2 w-full ">
+      <div className="lg:w-1/4 md:w-1/2 w-full">
         <h2 className="title-font font-medium text-white tracking-widest text-lg mb-3 underline">Home</h2>
-        <nav className="list-none mb-6">
+        <nav className="list-none gap-2  mb-6">
           <li>
-            <a className="text-white hover:text-gray-400 no-underline " href='#'>Disclaimer</a>
+            <a className="text-white hover:text-gray-400 no-underline p-2" href='#'>Disclaimer</a>
           </li>
           <li>
-            <button className="text-white  hover:text-gray-500 no-underline" href='#'><Link to="/govtpolicy" class="nav-link active">Government policies</Link></button>
+            <a className="text-white  hover:text-gray-500 no-underline p-2" href='#'><Link to="/govtpolicy" class="nav-link active">Government policies</Link></a>
           </li>
           <li>
-            <a className="text-white hover:text-gray-800 no-underline"><Link to="/donation" class="nav-link active">Donate Us</Link></a>
+            <a className="text-white hover:text-gray-800 no-underline p-2"><Link to="/donation" class="nav-link active">Donate Us</Link></a>
           </li>          
         </nav>
       </div>
      </div>    
     </div>
-    <div class="bg-gradient-to-r from-sky-900 to-indigo-900 w-full  pb-2">
+    <div class="bg-gradient-to-r from-sky-900 to-indigo-900 w-full">
       </div>
     </div>
     

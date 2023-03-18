@@ -2,8 +2,6 @@
 import './App.css';
 import './index.css';
 import Header from './MyComponents/Header';
-
-
 import Home from './MyPages/Home';
 import Hero from './MyPages/Hero';            
 import Coursecat from './MyPages/Coursecat';
@@ -26,6 +24,8 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 import Lead from "./MyComponents/leaders"
 import Login from './MyComponents/login'
+import Popup from './MyComponents/popup'
+
 // Contains the value and text for the options
 const languages = [
     { value: '', text: "Options" },
@@ -33,6 +33,7 @@ const languages = [
     { value: 'hi', text: "Hindi" },
     { value: 'mr', text: "Marathi" }
 ]
+
 
 function App() {
   const commands = [
@@ -65,7 +66,6 @@ function App() {
       redirect = <p>Could not find page: {redirectUrl}</p>;
     }
   }
-
   return (
   
    <Router>
@@ -91,7 +91,6 @@ function App() {
 
    <Routes>
     <Route path="/" element={<Hero/> } />
-
     <Route path="/home" element={<Hero/> } />
     <Route path="/coursecat" element={<Coursecat/>} />
     {/* <Route path="/syllabus" element={<Syllabus/>} /> */}
@@ -100,7 +99,7 @@ function App() {
     <Route path="/aboutus" element={<Aboutus/>} />
     <Route path="/ngoenroll" element={<Ngoenroll/>} />
     <Route path="/donation" element={<Donation/>} />
-    
+    <Route path="/popup" element={<Popup/>} />
     <Route path="/sidebarvideo" element={<Sidebarvideo/>} />
     <Route path="/video" element={<Videos/>} />
     <Route path="/videos" element={<Videos/>} />
@@ -109,10 +108,6 @@ function App() {
     {redirect}
   
   </Routes>
-{/*   
-  <h2 id="transcript" className='text-black'>Transcript: {transcript}</h2>
-
-      <button onClick={SpeechRecognition.startListening}>Start</button> */}
    </div>
    </Router>
    

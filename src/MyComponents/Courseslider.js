@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { render } from 'react-dom';
 import math from './../images/maths.png'
 import sci from './../images/sci.png'
+import eng from './../images/eng.png'
 import { useSpeechSynthesis } from "react-speech-kit";
 import {
   Card,
@@ -102,18 +103,18 @@ const Courseslider = () => {
           // </Card>
           // </>
           <div style={CONTAINER_STYLE()}>
-      <ReactCardCarousel autoplay={true} autoplay_speed={2500}>
+      <ReactCardCarousel autoplay={true} autoplay_speed={2000}>
         <div style={CARD_STYLE()}>
         <h2>Mathemetics</h2>
-          <img  src={math} alt='Math'/>
+          <img  src={math} alt='Math' className='grid h-100 align-center ml-9'/>
           </div>
         <div style={CARD_STYLE()}>
         <h2>Science</h2>
-          <img  src={sci} alt='Science'/>
+          <img  src={sci} alt='Science' className='grid h-100 align-center ml-9'/>
           </div>
         <div style={CARD_STYLE()}>
         <h2>English</h2>
-          <img  src={math} alt='Math'/>
+          <img  src={eng} alt='English' className='grid h-100 align-center ml-9'/>
           </div>
       </ReactCardCarousel>
     </div>
