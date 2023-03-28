@@ -1,17 +1,19 @@
 import React from 'react'
 import { FaLinkedin,FaFacebookSquare,FaInstagramSquare,FaTwitterSquare } from "react-icons/fa";
 import {Link,NavLink} from "react-router-dom"
+import logo from '.././images/whitelogo.png'
 
 const Footer = () => {
   return (
     <div>
     <div className='w-screen bg-gradient-to-r from-sky-900 to-indigo-900  py-6 px-4 grid lg:grid-cols-2 gap-30 text-gray-200'>
         <div>
-            <h1 className='w-full  text-3xl font-bold'>SHIKSHA</h1>
-            <p className=''>
-            Shiksha is designed in such a way that it is accessible to students with various difficulties, like visual, auditory etc. Our platform will have features like captioning, audio to text, screen reading and many more. Shiksha will foster an inclusive learning environment by promoting diversity and acceptance. Visual aids like pictures, diagrams, and videos can make thoughts and ideas easier to understand for nonverbal or non-speaking people.
+              <img className="h-8 w-auto" src={logo} alt='logo'/>
+            <p className='block ml-5 mt-2'>
+            Empowering Abilities, Unlocking Potential: Education for All! <br></br>
+            Shiksha is designed in such a way that it is accessible to students with various difficulties, like visual, auditory etc. <br></br>
 </p>
-            <div className='flex justify-start mt-4'>
+            <div className='flex justify-start mt-4 ml-5'>
                 <FaFacebookSquare size={30}/>
                 <FaLinkedin size={30}/>
                 <FaInstagramSquare size={30}/>
