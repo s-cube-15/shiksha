@@ -8,6 +8,7 @@ import { Carousel } from 'react-bootstrap';
 import img1 from './../images/cimg1.png';
 import img2 from './../images/cimg2.png';
 import img3 from './../images/cimg3.png';
+import vid1 from './../images/welcome.mp4';
 
 const Hero = () => {  
   return (
@@ -15,6 +16,18 @@ const Hero = () => {
     <Header/>
     <div>
      <Carousel slide={false}>
+     <Carousel.Item>
+      <video
+              controls
+              loop
+              autoplay
+              controlsList="nodownload"
+              src={vid1}
+              style={{
+                width: '100%',
+              }}
+            ></video>
+      </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"

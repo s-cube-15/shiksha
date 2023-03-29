@@ -6,9 +6,9 @@ import logo from '.././images/whitelogo.png'
 const Footer = () => {
   return (
     <div>
-    <div className='w-screen bg-gradient-to-r from-sky-900 to-indigo-900  py-6 px-4 grid lg:grid-cols-2 gap-30 text-gray-200'>
+    <div className='bg-gradient-to-r from-sky-900 to-indigo-900  py-6 px-4 grid lg:grid-cols-2 gap-30 text-gray-200'>
         <div>
-              <img className="h-8 w-auto" src={logo} alt='logo'/>
+              <img className="h-8" src={logo} alt='logo'/>
             <p className='block ml-5 mt-2'>
             Empowering Abilities, Unlocking Potential: Education for All! <br></br>
             Shiksha is designed in such a way that it is accessible to students with various difficulties, like visual, auditory etc. <br></br>

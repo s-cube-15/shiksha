@@ -4,7 +4,7 @@ import Header from './../MyComponents/Header';
 import About1 from './../MyComponents/About1';
 import About2 from './../MyComponents/About2';
 import logo from './../images/newlogo.png'
-import bg from './../images/aboutimg.jpg'
+import bg from './../images/aboutus.png'
 
 function Aboutus() {
   return (
