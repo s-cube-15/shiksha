@@ -1,6 +1,5 @@
 import React from "react";
 import lead from './leaders'
-// import bg from './../images/aboutbg.jpg'
 const links = [
   { name: 'Open roles', href: '#' },
   { name: 'Our Services', href: '#' },
@@ -18,27 +17,28 @@ const people = [
     name: 'Aayush Talreja',
     role: 'Founder / CEO',
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      'https://media.licdn.com/dms/image/C4D03AQGjVJnZjakikg/profile-displayphoto-shrink_200_200/0/1657648501282?e=1685577600&v=beta&t=GZVLCtCI6mAVh0T4uTBJODcNWased_DRS3pxg73A7Vk',
+      
   },
   {
     name: 'Mansi Bellani',
     role: 'Co-Founder / CIO',
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      'https://media.licdn.com/dms/image/D4D03AQG3tgMaLVMfug/profile-displayphoto-shrink_100_100/0/1666875030217?e=1685577600&v=beta&t=vfoT736oR7cZXkuDcl9J6ZSnJIOaJzpkaJ1D-Y6qh_0',
   },
   {
     name: 'Niranjan Yeole',
     role: 'CFO',
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      'https://media.licdn.com/dms/image/C4E03AQFMaAxosx5O8A/profile-displayphoto-shrink_100_100/0/1642847850390?e=1685577600&v=beta&t=LDCn4WpFeU6vUMdAP6e9nQf4Cdz4DNs6zvy52GHkwVI',
   },
   {
     name: 'Anuj Bagad',
     role: 'COO',
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      'https://media.licdn.com/dms/image/C4D03AQG7ln3Kb53VZA/profile-displayphoto-shrink_100_100/0/1641273867979?e=1685577600&v=beta&t=QRlrRpePXwAuUynmY0zhCahF2ZU4cKns6uUqbDMdIZE',
+    
   },
-  // More people...
 ]
 
 function About1() {
@@ -52,10 +52,8 @@ function About1() {
     //     </div>
     //     {/* <p class=" text-dark position-absolute top-100 start-50 translate-middle ">Our aim is to provide equal opportunity of Education to everyone irrespective of their gender identity.To accept them as an individual with due respect and acceptability, free from any social stigma or prejudices and above all to respect HUMANITY.</p> */}
     //   </div>
-      <div className="relative isolate overflow-hidden bg-gray-900 py-35 sm:py-40">
-      <img
-        className="bg-gradient-to-t absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
-      />
+      <div className="relative  overflow-hidden bg-gray-900 py-35 sm:py-40">
+      <img className="bg-gradient-to-t absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center" />
       <svg
         viewBox="0 0 1097 845"
         aria-hidden="true"
@@ -146,7 +144,7 @@ function About1() {
             {people.map((person) => (
               <li key={person.name}>
                 <div className="flex items-center gap-x-6">
-                  <img className="h-16 w-16 rounded-full" src={person.imageUrl} alt="" />
+                  <img className="h-25 w-25 rounded-full" src={person.imageUrl} alt="" />
                   <div>
                     <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-300">{person.name}</h3>
                     <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>
@@ -157,8 +155,7 @@ function About1() {
           </ul>
         </div>
       </div>
-    </div>
-    
+    </div> 
   );
 }
 

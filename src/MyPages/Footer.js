@@ -5,8 +5,8 @@ import logo from '.././images/whitelogo.png'
 
 const Footer = () => {
   return (
-    <div>
-    <div className='bg-gradient-to-r from-sky-900 to-indigo-900  py-6 px-4 grid lg:grid-cols-2 gap-30 text-gray-200'>
+    <div className='bg-gray-800'>
+    <div className='bg-gradient-to-t  py-6 px-4 grid lg:grid-cols-2 gap-30 text-gray-200'>
         <div>
               <img className="h-8" src={logo} alt='logo'/>
             <p className='block ml-5 mt-2'>

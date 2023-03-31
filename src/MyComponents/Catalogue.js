@@ -13,9 +13,10 @@ function Catalogue() {
   const simmath = 'Simplified Mathemetics. It contains 12 lectures and 7 quizes'
   return (
     <div class=" m-3	">
-      <h5 class="text-black d-flex justify-content-start p-2 fs-4">Course Catalogue</h5>
-      <nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
+
+      {/* <h5 class="text-black d-flex justify-content-start p-2 fs-4">Course Catalogue</h5> */}
+      {/* <nav class="navbar bg-body-tertiary"> */}
+  {/* <div class="container-fluid">
     <form class="d-flex" role="search">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
       <button class="btn btn-outline-success" type="submit">Search</button>
@@ -26,12 +27,12 @@ function Catalogue() {
       <option value="3">Practical</option>
       </select>
     </form>
-  </div>
-</nav>
-      <div className="d-flex flex-wrap justify-content-between gap-4 pt-5">
-        <div class="card" style={{ width: "20rem" }}>
-          <img src="/Course.png" class="card-img-top" alt="..." />
-          <div class="card-body">
+  </div> */}
+{/* </nav> */}
+      <div className="d-flex flex-wrap justify-content-between gap-4 pt-5 ">
+        <div className="card" style={{ width: "18rem" }}>
+          <img src="/evs.png" class="card-img-top" alt="..."/>
+          <div className="card-body text-gray-500 font-semibold bg-sky-200 ">
             <h5 class="card-title fs-4">Environmental Science-1</h5>
             <button onClick={() => speak({ text: evs })}>
         <img src={vol} alt="volume"></img>
@@ -42,14 +43,14 @@ function Catalogue() {
             <p class="card-text p-2">
             Aayush Talreja
             </p>
-            <a href="videos" class="btn btn-info">
-            <Link to="/videos" class="nav-link active">View Course</Link>
+            <a href="videos" class="btn btn-outline-primary">
+            <Link to="/videos" class="nav-link active ">Enroll</Link>
             </a>
           </div>
         </div>
-        <div class="card" style={{ width: "20rem" }}>
-          <img src="/Course.png" class="card-img-top" alt="..." />
-          <div class="card-body">
+        <div class="card" style={{ width: "18rem" }}>
+        <img src="/evs.png" class="card-img-top" alt="..."/>
+          <div className="card-body text-gray-500 font-semibold bg-sky-200 ">
             <h5 class="card-title fs-4">Environmental Science-2</h5><button onClick={() => speak({ text: evs2 })}>
         <img src={vol} alt="volume"></img>
       </button>
@@ -60,14 +61,14 @@ function Catalogue() {
              
             Niranjan Yeole
             </p>
-            <a href="videos" class="btn btn-info">
-            <Link to="/videos" class="nav-link active">View Course</Link>
+            <a href="videos" class="btn btn-outline-primary">
+            <Link to="/videos" class="nav-link active">Enroll</Link>
             </a>
           </div>
         </div>
-        <div class="card" style={{ width: "20rem" }}>
-          <img src="/Course.png" class="card-img-top" alt="..." />
-          <div class="card-body">
+        <div class="card" style={{ width: "18rem" }}>
+        <img src="/evs.png" class="card-img-top" alt="..."/>
+          <div className="card-body text-gray-500 font-semibold bg-sky-200 ">
             <h5 class="card-title fs-4">EVS-Practical</h5>
             <button onClick={() => speak({ text: evsprac })}>
               <img src={vol} alt="volume"></img>
@@ -79,14 +80,14 @@ function Catalogue() {
               
             Anuj Bagad
             </p>
-            <a href="videos" class="btn btn-info">
-            <Link to="/videos" class="nav-link active">View Course</Link>
+            <a href="videos" class="btn btn-outline-primary">
+            <Link to="/videos" class="nav-link active">Enroll</Link>
             </a>
           </div>
         </div>
-        <div class="card" style={{ width: "20rem" }}>
-          <img src="/course1.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
+        <div class="card" style={{ width: "18rem" }}>
+        <img src="/math.png" class="card-img-top" alt="..."/>
+          <div className="card-body text-gray-500 font-semibold bg-sky-200 ">
             <h5 class="card-title fs-4">Basics of Mathemetics</h5>
             <button onClick={() => speak({ text: basicmath })}>
               <img src={vol} alt="volume"></img>
@@ -98,14 +99,14 @@ function Catalogue() {
               
             Mansi Bellani
             </p>
-            <a href="videos" class="btn btn-info">
-            <Link to="/videos" class="nav-link active">View Course</Link>
+            <a href="videos" class="btn btn-outline-primary">
+            <Link to="/videos" class="nav-link active">Enroll</Link>
             </a>
           </div>
         </div>
-        <div class="card" style={{ width: "20rem" }}>
-          <img src="/course2.png" class="card-img-top" alt="..." />
-          <div class="card-body">
+        <div class="card" style={{ width: "18rem" }}>
+        <img src="/math.png" class="card-img-top" alt="..."/>
+          <div className="card-body text-gray-500 font-semibold bg-sky-200 ">
             <h5 class="card-title fs-4">Simplified Mathemetics</h5>
             <button onClick={() => speak({ text: simmath })}>
               <img src={vol} alt="volume"></img>
@@ -117,8 +118,8 @@ function Catalogue() {
               
             Shams Tabrez
             </p>
-            <a href="videos" class="btn btn-info">
-            <Link to="/videos" class="nav-link active">View Course</Link>
+            <a href="videos" class="btn btn-outline-primary">
+            <Link to="/videos" class="nav-link active">Enroll</Link>
             </a>
           </div>
         </div>

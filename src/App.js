@@ -44,6 +44,9 @@ function App() {
 
   const { transcript } = useSpeechRecognition({ commands });
   const [redirectUrl, setRedirectUrl] = useState("");
+  if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
+    return null
+  }
   const pages = ["home", "about", "course", "profile"];
   const urls = {
     home: "/",
@@ -51,10 +54,6 @@ function App() {
     course: "/coursecat",
     profile: "/ngoenroll",
   };
-
-  if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
-    return null;
-  }
 
   let redirect = "";
 
