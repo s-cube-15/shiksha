@@ -11,6 +11,7 @@ function Catalogue() {
   const evsprac = 'Environmental Science-Practical. It contains the practice of basic science experiments'
   const basicmath = 'Basics of Mathemetics. It contains 12 lectures and 7 quizes'
   const simmath = 'Simplified Mathemetics. It contains 12 lectures and 7 quizes'
+  const eng = 'English. It contains 10 story telling lectures and 5 quizes'
   return (
     <div class=" m-3	">
 
@@ -29,7 +30,7 @@ function Catalogue() {
     </form>
   </div> */}
 {/* </nav> */}
-      <div className="d-flex flex-wrap justify-content-between gap-4 pt-5 ">
+      <div className="d-flex flex-wrap gap-5 pt-5 ">
         <div className="card" style={{ width: "18rem" }}>
           <img src="/evs.png" class="card-img-top" alt="..."/>
           <div className="card-body text-gray-500 font-semibold bg-sky-200 ">
@@ -48,6 +49,7 @@ function Catalogue() {
             </a>
           </div>
         </div>
+
         <div class="card" style={{ width: "18rem" }}>
         <img src="/evs.png" class="card-img-top" alt="..."/>
           <div className="card-body text-gray-500 font-semibold bg-sky-200 ">
@@ -104,6 +106,7 @@ function Catalogue() {
             </a>
           </div>
         </div>
+        
         <div class="card" style={{ width: "18rem" }}>
         <img src="/math.png" class="card-img-top" alt="..."/>
           <div className="card-body text-gray-500 font-semibold bg-sky-200 ">
@@ -123,6 +126,45 @@ function Catalogue() {
             </a>
           </div>
         </div>
+
+        <div class="card" style={{ width: "18rem" }}>
+        <img src="/eng.jpg" class="card-img-top" alt="..."/>
+          <div className="card-body text-gray-500 font-semibold bg-sky-200 ">
+            <h5 class="card-title fs-4 ">English</h5>
+            <button onClick={() => speak({ text: eng })}>
+              <img src={vol} alt="volume"></img>
+            </button>
+            <p class="card-text p-2">
+            10 lessons • 5 quizes
+            </p>
+            <p class="card-text p-2">
+            Shams Tabrez
+            </p>
+            <a href="videos" class="btn btn-outline-primary">
+            <Link to="/videos" class="nav-link active">Enroll</Link>
+            </a>
+          </div>
+        </div>
+
+        <div class="card" style={{ width: "18rem" }}>
+        <img src="/enggram.jpg" class="card-img-top" alt="..."/>
+          <div className="card-body text-gray-500 font-semibold bg-sky-200 ">
+            <h5 class="card-title fs-4 ">English Grammar</h5>
+            <button onClick={() => speak({ text: eng })}>
+              <img src={vol} alt="volume"></img>
+            </button>
+            <p class="card-text p-2">
+            10 lessons • 5 quizes
+            </p>
+            <p class="card-text p-2">
+            Shams Tabrez
+            </p>
+            <a href="videos" class="btn btn-outline-primary">
+            <Link to="/videos" class="nav-link active">Enroll</Link>
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   );
