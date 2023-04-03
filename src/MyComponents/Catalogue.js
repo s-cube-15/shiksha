@@ -30,6 +30,8 @@ function Catalogue() {
     </form>
   </div> */}
 {/* </nav> */}
+
+      {/* CARD IMAGE DIM.: 1163 x 1206 */}
       <div className="d-flex flex-wrap gap-5 pt-5 ">
         <div className="card" style={{ width: "18rem" }}>
           <img src="/evs.png" class="card-img-top" alt="..."/>
