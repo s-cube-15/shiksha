@@ -13,7 +13,7 @@
 
 <hr>
 
-## Screenshots (Course Catalogue)
+## Screenshots (Courses)
 <img src = "src/images/ss/ss8.png" />
 <img src = "src/images/ss/ss9.png" />
 <img src = "src/images/ss/ss9=10.png" />

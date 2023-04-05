@@ -2,6 +2,7 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import {Link,NavLink} from "react-router-dom"
 import vol from './../images/volume.png' 
+import profile from './../images/profile.png' 
 import { useSpeechSynthesis } from "react-speech-kit";
 
 function Catalogue() {
@@ -44,6 +45,7 @@ function Catalogue() {
             12 lessons • 7 quiz
             </p>
             <p class="card-text p-2">
+            <img className="h-30 w-10 rounded-full" src='https://media.licdn.com/dms/image/C4D03AQGjVJnZjakikg/profile-displayphoto-shrink_200_200/0/1657648501282?e=1685577600&v=beta&t=GZVLCtCI6mAVh0T4uTBJODcNWased_DRS3pxg73A7Vk' alt="" />
             Aayush Talreja
             </p>
             <a href="videos" class="btn btn-outline-primary">
@@ -62,7 +64,7 @@ function Catalogue() {
             12 lessons • 7 quiz
             </p>
             <p class="card-text p-2">
-             
+            <img className="h-30 w-10 rounded-full" src='https://media.licdn.com/dms/image/C4E03AQFMaAxosx5O8A/profile-displayphoto-shrink_100_100/0/1642847850390?e=1685577600&v=beta&t=LDCn4WpFeU6vUMdAP6e9nQf4Cdz4DNs6zvy52GHkwVI' alt="" />
             Niranjan Yeole
             </p>
             <a href="videos" class="btn btn-outline-primary">
@@ -81,7 +83,7 @@ function Catalogue() {
             5 labs
             </p>
             <p class="card-text p-2">
-              
+            <img className="h-30 w-10 rounded-full" src='https://media.licdn.com/dms/image/C4D03AQG7ln3Kb53VZA/profile-displayphoto-shrink_100_100/0/1641273867979?e=1685577600&v=beta&t=QRlrRpePXwAuUynmY0zhCahF2ZU4cKns6uUqbDMdIZE' alt="" />
             Anuj Bagad
             </p>
             <a href="videos" class="btn btn-outline-primary">
@@ -100,7 +102,7 @@ function Catalogue() {
             12 lessons • 7 quiz
             </p>
             <p class="card-text p-2">
-              
+            <img className="h-30 w-10 rounded-full" src='https://media.licdn.com/dms/image/D4D03AQG3tgMaLVMfug/profile-displayphoto-shrink_100_100/0/1666875030217?e=1685577600&v=beta&t=vfoT736oR7cZXkuDcl9J6ZSnJIOaJzpkaJ1D-Y6qh_0' alt="" />
             Mansi Bellani
             </p>
             <a href="videos" class="btn btn-outline-primary">
@@ -120,7 +122,7 @@ function Catalogue() {
             12 lessons • 7 quiz
             </p>
             <p class="card-text p-2">
-              
+            <img className="h-30 w-10 rounded-full" src={profile} alt="" />
             Shams Tabrez
             </p>
             <a href="videos" class="btn btn-outline-primary">
@@ -140,6 +142,7 @@ function Catalogue() {
             10 lessons • 5 quizes
             </p>
             <p class="card-text p-2">
+            <img className="h-30 w-10 rounded-full" src={profile} alt="" />
             Shams Tabrez
             </p>
             <a href="videos" class="btn btn-outline-primary">
@@ -159,6 +162,7 @@ function Catalogue() {
             10 lessons • 5 quizes
             </p>
             <p class="card-text p-2">
+            <img className="h-30 w-10 rounded-full" src={profile} alt="" />
             Shams Tabrez
             </p>
             <a href="videos" class="btn btn-outline-primary">
@@ -166,7 +170,16 @@ function Catalogue() {
             </a>
           </div>
         </div>
-
+        {/* <div className="card lg:card-side bg-base-100 shadow-xl">
+  <figure><img src="/evs.png" className='h-80' alt="Album"/></figure>
+  <div className="card-body">
+    <h2 className="card-title">New album is released!</h2>
+    <p>Click the button to listen on Spotiwhy app.</p>
+    <div className="card-actions justify-end">
+      <button className="btn btn-primary">Listen</button>
+    </div>
+  </div>
+</div> */}
       </div>
     </div>
   );
