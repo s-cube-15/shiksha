@@ -1,61 +1,59 @@
-// import * as React from 'react';
-// import Box from '@mui/material/Box';
-// import Button from '@mui/material/Button';
-// import Typography from '@mui/material/Typography';
-// import Modal from '@mui/material/Modal';
+import React from "react";
 
-// const style = {
-//   position: 'absolute',
-//   top: '50%',
-//   left: '50%',
-//   transform: 'translate(-50%, -50%)',
-//   width: 400,
-//   bgcolor: 'background.paper',
-//   border: '2px solid #000',
-//   boxShadow: 24,
-//   p: 4,
-// };
-
-//  function Popup() {
-//   const [open, setOpen] = React.useState(false);
-//   const handleOpen = () => setOpen(true);
-//   const handleClose = () => setOpen(false);
-
-//   return (
-//     <div>
-//       <Button onClick={handleOpen}>Open modal</Button>
-//       <Modal
-//         open={open}
-//         onClose={handleClose}
-//         aria-labelledby="modal-modal-title"
-//         aria-describedby="modal-modal-description"
-//       >
-//         <Box sx={style}>
-//           <Typography id="modal-modal-title" variant="h6" component="h2">
-//             Text in a modal
-//           </Typography>
-//           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-//             Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-//           </Typography>
-//         </Box>
-//       </Modal>
-//     </div>
-//   );
-// }
-// export default Popup;
-import React from 'react';
-import Popup from 'reactjs-popup';
-
-const PopupExample = () => (
-    <Popup trigger={<button>Trigger</button>} position="top left">
-      {close => (
-        <div className='text-black'>
-          Content here
-          <a className="close" href='#' onClick={close}>
-            &times;
-          </a>
-        </div>
-      )}
-    </Popup>
+export default function PopupExample() {
+  const [showModal, setShowModal] = React.useState(false);
+  return (
+    <>
+      <button
+        className="w-full h-full justify-center items-center flex overflow-x-hidden overflow-y-auto fixed bg-gray-800 text-white active:bg-gray-600 font-bold uppercase text-3xl px-6 py-3 shadow hover:shadow-lg outline-none focus:outline-none j ease-linear transition-all duration-150"
+        type="button"
+        onClick={() => setShowModal(true)}
+      >
+        Coming Soon!
+      </button>
+      {showModal ? (
+        <>
+          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                  <h3 className="text-3xl font-bold">
+                    COMING SOON...
+                  </h3>
+                  <button
+                    className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                    onClick={() => setShowModal(false)}
+                  >
+                  </button>
+                </div>
+                <div className="relative p-6 flex-auto">
+                  <p className="my-4 text-slate-500 text-lg leading-relaxed">
+                  The Guide page is currently undergoing development. Our team is working diligently to ensure that this feature is fully operational as soon as possible.</p>
+                  <p className="my-4 text-slate-500 text-lg leading-relaxed">We appreciate your patience and understanding during this time. We will keep you updated on the progress and let you know as soon as the feature is available again.
+                  </p>
+                </div>
+                <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                  {/* <button
+                    className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button"
+                    onClick={() => setShowModal(false)}
+                  >
+                    Go Back
+                  </button> */}
+                  <button
+                    className="bg-gray-800 text-white active:bg-gray-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button"
+                    onClick={() => setShowModal(false)}
+                  >
+                    Okay
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+        </>
+      ) : null}
+    </>
   );
-export default PopupExample;
+}
