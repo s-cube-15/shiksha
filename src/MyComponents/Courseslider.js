@@ -5,122 +5,96 @@ import math from './../images/maths.png'
 import sci from './../images/sci.png'
 import eng from './../images/eng.png'
 import { useSpeechSynthesis } from "react-speech-kit";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-  Button,
-} from "@material-tailwind/react";
-import ReactCardCarousel from "react-card-carousel";
 import ReactDOM from "react-dom";
-function CONTAINER_STYLE() {
-  return {
-    position: "relative",
-    height: "100vh",
-    width: "100%",
-    display: "flex",
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
-  };
+// function CONTAINER_STYLE() {
+//   return {
+//     position: "relative",
+//     height: "100vh",
+//     width: "100%",
+//     display: "flex",
+//     flex: 1,
+//     justifyContent: "center",
+//     alignItems: "center"
+//   };
+// }
+
+
+// const Courseslider = () => {
+//   const { speak } = useSpeechSynthesis()
+//   const mcourse = 'View Mathemetics Course'
+//   const ecourse = 'View English Course'
+//   const scourse = 'View Science Course'
+/*
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/aspect-ratio'),
+    ],
+  }
+  ```
+*/
+const subjects = [
+  {
+    name: 'Science',
+    description: '',
+    imageSrc: sci,
+    imageAlt: 'Scince image',
+    href: '#',
+  },
+  {
+    name: 'Mathematics',
+    description: '',
+    imageSrc: math,
+    imageAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
+    href: '#',
+  },
+  {
+    name: 'English',
+    description: '',
+    imageSrc: eng,
+    imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
+    href: '#',
+  },
+]
+
+export default function Courseslider() {
+  return (
+    <div className="bg-gray-100">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
+          <h2 className="text-2xl font-bold text-gray-900">Subjects Taught</h2>
+
+          <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
+            {subjects.map((subject) => (
+              <div key={subject.name} className="group relative text-xl">
+                <div className="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                  <img
+                    src={subject.imageSrc}
+                    alt={subject.imageAlt}
+                    className="h-full w-full object-cover object-center"
+                  />
+                </div>
+                <h2 className="mt-6 text-sm text-gray-500">
+                  <a href={subject.href} className="text-xl">
+                    <span className="absolute inset-0 text-l" />
+                    {subject.name}
+                  </a>
+                </h2>
+                <p className="text-base font-semibold text-gray-900">{subject.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
-function CARD_STYLE() {
-  return {
-    height: "500px",
-    width: "500px",
-    paddingTop: "80px",
-    textAlign: "center",
-    background: "#1F2937",
-    color: "#FFF",
-    fontFamily: "sans-serif",
-    fontSize: "30px",
-    textTransform: "uppercase",
-    borderRadius: "10px",
-    boxSizing: "border-box"
-  };
-}
-const Courseslider = () => {
-  const { speak } = useSpeechSynthesis()
-  const mcourse = 'View Mathemetics Course'
-  const ecourse = 'View English Course'
-  const scourse = 'View Science Course'
-          return (
-          //   <>
-          //   <Card className="w-80 max-w-[26rem] ml-5 shadow-lg m-3">
-          //   <CardHeader color="blue-gray">
-          //     <img
-          //       src={math}
-          //       alt="math"
-          //     />
-          //     {/* <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-white/60 " /> */}
-             
-          //   </CardHeader>
-          //   <CardBody>
-          //     <div className="mb-3 mt-3 text-center m-0">
-          //       <Typography variant="h3" color="blue-gray" className="font-medium">
-          //         Mathemetics
-          //       </Typography>
-          //     </div>
-          //     <Typography color="gray" className="mb-3 mt-3 text-center flex ">
-          //       Enter a freshly updated and thoughtfully furnished peaceful home
-          //       surrounded by ancient trees, stone walls, and open meadows.
-          //     </Typography>
-          //   </CardBody>
-          //   <CardFooter className="pt-3">
-          //     <Button size="m" fullWidth={true}>
-          //       View Course
-          //     </Button>
-          //   </CardFooter>
-          // </Card>
-          //   <Card className="w-80 max-w-[26rem] ml-5 shadow-lg m-3">
-          //   <CardHeader color="blue-gray">
-          //     <img
-          //       src={math}
-          //       alt="math"
-          //     />
-          //     {/* <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-white/60 " /> */}
-             
-          //   </CardHeader>
-          //   <CardBody>
-          //     <div className="mb-3 mt-3 text-center m-0">
-          //       <Typography variant="h3" color="blue-gray" className="font-medium">
-          //         Science
-          //       </Typography>
-          //     </div>
-          //     <Typography color="gray" className="mb-3 mt-3 text-center flex ">
-          //       Enter a freshly updated and thoughtfully furnished peaceful home
-          //       surrounded by ancient trees, stone walls, and open meadows.
-          //     </Typography>
-          //   </CardBody>
-          //   <CardFooter className="pt-3">
-          //     <Button size="m" fullWidth={true}>
-          //       View Course
-          //     </Button>
-          //   </CardFooter>
-          // </Card>
-          // </>
-          <div style={CONTAINER_STYLE()}>
-      <ReactCardCarousel autoplay={true} autoplay_speed={2000}>
-        <div style={CARD_STYLE()}>
-        <h2>Mathemetics</h2>
-          <img  src={math} alt='Math' className='grid h-100 align-center ml-9'/>
-          </div>
-        <div style={CARD_STYLE()}>
-        <h2>Science</h2>
-          <img  src={sci} alt='Science' className='grid h-100 align-center ml-9'/>
-          </div>
-        <div style={CARD_STYLE()}>
-        <h2>English</h2>
-          <img  src={eng} alt='English' className='grid h-100 align-center ml-9'/>
-          </div>
-      </ReactCardCarousel>
-    </div>
-  );
-}
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(<Courseslider />, rootElement);
-export default Courseslider 
