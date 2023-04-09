@@ -24,6 +24,7 @@ import SpeechRecognition, {
 import Lead from "./MyComponents/leaders"
 import Login from './MyComponents/login'
 import Popup from './MyComponents/popup'
+import Profile from './MyPages/profile'
 
 // Contains the value and text for the options
 const languages = [
@@ -103,6 +104,7 @@ function App() {
     <Route path="/videos" element={<Videos/>} />
     <Route path="/login" element={<Login/>}/>
     <Route path="/leaders" element={<Lead/>}/>
+    <Route path="/profile" element={<Profile/>}/>
     {redirect}
   
   </Routes>
