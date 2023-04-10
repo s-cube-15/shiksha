@@ -24,6 +24,7 @@ import SpeechRecognition, {
 import Lead from "./MyComponents/leaders"
 import Login from './MyComponents/login'
 import Popup from './MyComponents/popup'
+import Banner from './MyComponents/banner'
 import Profile from './MyPages/profile'
 
 // Contains the value and text for the options
@@ -105,6 +106,7 @@ function App() {
     <Route path="/login" element={<Login/>}/>
     <Route path="/leaders" element={<Lead/>}/>
     <Route path="/profile" element={<Profile/>}/>
+    <Route path="/banner" element={<Banner/>}/>
     {redirect}
   
   </Routes>

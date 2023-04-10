@@ -13,6 +13,7 @@ import vid1 from './../images/welcome.mp4';
 const Hero = () => {  
   return (
     <>
+    
     <Header/>
     <div>
      <Carousel slide={false}>
