@@ -21,3 +21,7 @@
 ## Screenshots (Login & Profile)
 <img src = "src/images/ss/ss12.png" />
 <img src = "src/images/ss/ss11.png" />
+
+## Screenshots (Chatbot)
+<img src = "src/images/ss/ss13.png" />
+<img src = "src/images/ss/ss14.png" />

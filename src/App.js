@@ -43,6 +43,17 @@ function App() {
       callback: (redirectPage) => setRedirectUrl(redirectPage),
     },
   ];
+  
+  (function(d, w, c) {
+    w.ChatraID = '5vCLi7r4tiubquMC9';
+    var s = d.createElement('script');
+    w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments);
+    };
+    s.async = true;
+    s.src = 'https://call.chatra.io/chatra.js';
+    if (d.head) d.head.appendChild(s);
+})(document, window, 'Chatra');
 
   const { transcript } = useSpeechRecognition({ commands });
   const [redirectUrl, setRedirectUrl] = useState("");
