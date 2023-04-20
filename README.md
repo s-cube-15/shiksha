@@ -25,3 +25,11 @@
 ## Screenshots (Chatbot)
 <img src = "src/images/ss/ss13.png" />
 <img src = "src/images/ss/ss14.png" />
+
+## Screenshots (Mobile Responsive)
+<img src = "src/images/ss/mobss1.png" />
+<img src = "src/images/ss/mobss2.png" />
+<img src = "src/images/ss/mobss3.png" />
+<img src = "src/images/ss/mobss4.png" />
+<img src = "src/images/ss/mobss5.png" />
+<img src = "src/images/ss/mobss6.png" />
