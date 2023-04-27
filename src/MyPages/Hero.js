@@ -17,7 +17,18 @@ const Hero = () => {
     <Header/>
     <div>
      <Carousel slide={false}>
-     
+     <Carousel.Item>
+      <video
+              controls
+              loop
+              autoplay
+              controlsList="nodownload"
+              src={vid1}
+              style={{
+                width: '100%',
+              }}
+            ></video>
+      </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"

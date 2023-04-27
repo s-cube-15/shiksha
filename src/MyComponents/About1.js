@@ -7,9 +7,9 @@ const links = [
   { name: 'Meet our leadership', href:'#leadership'},
 ]
 const stats = [
-  { name: 'Price', value: 'Free' },
-  { name: 'Price', value: 'Free' },
-  { name: 'Price', value: 'Free' },
+  { name: 'Full-Time Tutors', value: '160+' },
+  { name: 'Students Tutored', value: '300+' },
+  { name: 'Lecture Videos', value: '450+' },
   { name: 'Price', value: 'Free' },
 ]
 const people = [
@@ -27,23 +27,16 @@ const people = [
       'https://media.licdn.com/dms/image/D4D03AQG3tgMaLVMfug/profile-displayphoto-shrink_100_100/0/1666875030217?e=1685577600&v=beta&t=vfoT736oR7cZXkuDcl9J6ZSnJIOaJzpkaJ1D-Y6qh_0',
   },
   {
-    name: 'Sudhanshu Sabale',
+    name: 'Niranjan Yeole',
     role: 'CFO',
     imageUrl:
-      'https://media.licdn.com/dms/image/D4D03AQGGyi7iO4NFKw/profile-displayphoto-shrink_100_100/0/1679249654187?e=1687996800&v=beta&t=K8V-sv2kcU-3gQ_PeV-jAa7Ylq6llCpMOBKtP5UIlcA',
+      'https://media.licdn.com/dms/image/C4E03AQFMaAxosx5O8A/profile-displayphoto-shrink_100_100/0/1642847850390?e=1685577600&v=beta&t=LDCn4WpFeU6vUMdAP6e9nQf4Cdz4DNs6zvy52GHkwVI',
   },
   {
-    name: 'Harsh Rane',
+    name: 'Anuj Bagad',
     role: 'COO',
     imageUrl:
-      'https://media.licdn.com/dms/image/D4D03AQGcKejO7iP_IQ/profile-displayphoto-shrink_100_100/0/1635878180137?e=1687996800&v=beta&t=Z8QsyKhiREDeCJcgVOXycmDaItia5sOE4BcQ7F-IdkE',
-    
-  },
-  {
-    name: 'Mrs. Sunita Sahu',
-    role: 'Mentor',
-    imageUrl:
-      'https://media.licdn.com/dms/image/D4D03AQEeDSdtkZWZHQ/profile-displayphoto-shrink_100_100/0/1679044765734?e=1687996800&v=beta&t=cTK-EuXEJiKjOnhNr3X_rqPbObjyqNsYYzFS_K9z3fo',
+      'https://media.licdn.com/dms/image/C4D03AQG7ln3Kb53VZA/profile-displayphoto-shrink_100_100/0/1641273867979?e=1685577600&v=beta&t=QRlrRpePXwAuUynmY0zhCahF2ZU4cKns6uUqbDMdIZE',
     
   },
 ]
@@ -109,10 +102,36 @@ function About1() {
           </linearGradient>
         </defs>
       </svg>
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className=" max-w-2xl lg:mx-0">
+          <h2 className="text-4xl font-bold tracking-tight text-blue-500 sm:text-6xl">OUR VISION</h2>
+          <p className="mt-6 text-lg leading-8 text-white">
+          Our aim is to provide equal opportunity of Education to everyone
+          irrespective of their disability.
+          </p>
+        </div>
+        <div className="ml-8 mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+          <div className="grid grid-cols-1 gap-y-6 gap-x-8 text-base font-semibold leading-7 text-blue-500 sm:grid-cols-2 md:flex lg:gap-x-10">
+            {links.map((link) => (
+              <a key={link.name} href={link.href}>
+                {link.name} <span aria-hidden="true">&rarr;</span>
+              </a>
+            ))}
+          </div>
+          <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+            {stats.map((stat) => (
+              <div key={stat.name} className="flex flex-col-reverse">
+                <dt className="text-base leading-7 text-blue-500">{stat.name}</dt>
+                <dd className="text-2xl font-bold leading-9 tracking-tight text-white">{stat.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </div>
 
       {/* Leadership */}
 
-      <div className="bg-gradient-to-t py-24 sm:py-32" id="leadership">
+      <div className="bg-gradient-to-t py-24 sm:py-32 mt-40" id="leadership">
         <div className="mx-auto grid max-w-7xl gap-y-20 gap-x-8 px-6 lg:px-8 xl:grid-cols-3">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-bold tracking-tight text-gray-300 sm:text-4xl">Meet our leadership</h2>

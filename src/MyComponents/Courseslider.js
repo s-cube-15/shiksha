@@ -1,9 +1,10 @@
 import React,{ Component } from 'react'
 import Slider from "react-slick";
 import { render } from 'react-dom';
-import hostel from './../images/hostelbassi.jpg'
-import ag from './../images/aakashg.jfif'
-import abhishek from './../images/tongueau.jpg'
+import math from './../images/maths.png'
+import sci from './../images/sci.png'
+import eng from './../images/eng.png'
+import { useSpeechSynthesis } from "react-speech-kit";
 import ReactDOM from "react-dom";
 // function CONTAINER_STYLE() {
 //   return {
@@ -39,25 +40,25 @@ import ReactDOM from "react-dom";
 */
 const subjects = [
   {
-    name: 'Sarojini Nagar - Aakash Gupta',
-    description: '★ Rating: 8.8/10',
-    imageSrc: ag,
-    imageAlt: 'Aakash Gupta - image',
-    href: 'https://www.youtube.com/watch?v=KBZfnt80s54&t=262s&pp=ygUac2Fyb2ppbmkgbmFnYXIgYWthc2ggZ3VwdGE%3D',
+    name: 'Science',
+    description: '',
+    imageSrc: sci,
+    imageAlt: 'Scince image',
+    href: '#',
   },
   {
-    name: 'Hostel - Anubhav Singh Bassi',
-    description: '★ Rating: 8.2/10',
-    imageSrc: hostel,
-    imageAlt: 'Bassi - img',
-    href: 'https://www.youtube.com/watch?v=Tqsz6fjvhZM',
+    name: 'Mathematics',
+    description: '',
+    imageSrc: math,
+    imageAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
+    href: '#',
   },
   {
-    name: 'Tongue Issues - Abhishek Upmanyu',
-    description: '★ Rating: 7.9/10',
-    imageSrc: abhishek,
-    imageAlt: 'Abhishek Up - img',
-    href: 'https://www.youtube.com/watch?v=Slqo8SHnFaU&t=145s&pp=ygUaYmVzdCBzdGFuZCB1cCBjb21lZHkgaGluZGk%3D',
+    name: 'English',
+    description: '',
+    imageSrc: eng,
+    imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
+    href: '#',
   },
 ]
 
@@ -66,7 +67,7 @@ export default function Courseslider() {
     <div className="bg-gray-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
-          <h2 className="text-2xl font-bold text-gray-900">Highest Rated Videos</h2>
+          <h2 className="text-2xl font-bold text-gray-900">Subjects Taught</h2>
 
           <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
             {subjects.map((subject) => (
@@ -78,13 +79,13 @@ export default function Courseslider() {
                     className="h-full w-full object-cover object-center"
                   />
                 </div>
-                <h2 className="mt-6 text-sm text-gray-800">
+                <h2 className="mt-6 text-sm text-gray-500">
                   <a href={subject.href} className="text-xl">
                     <span className="absolute inset-0 text-l" />
                     {subject.name}
                   </a>
                 </h2>
-                <p className="text-xl mt-2 font-semibold text-red-700">{subject.description}</p>
+                <p className="text-base font-semibold text-gray-900">{subject.description}</p>
               </div>
             ))}
           </div>
