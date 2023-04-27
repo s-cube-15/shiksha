@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom"
-import slogo from './../images/newlogopng.png'
-import newlogo from './../images/whitelogo.png'
+import slogo from './../images/gigglewhite.png'
+import newlogo from './../images/gigglewhite.png'
 import { useSpeechSynthesis } from "react-speech-kit";
 import profilelogo from './../images/profile.png'
 import { Fragment } from 'react'
@@ -11,7 +11,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 const navigation = [
   { name: 'HOME', href: '/', current: false },
   { name: 'ABOUT US', href: '/aboutus', current: false },
-  { name: 'COURSES', href: '/coursecat', current: false },
+  { name: 'VIDEOS', href: '/coursecat', current: false },
   { name: 'GUIDE', href: '/popup', current: false },
 ]
 function classNames(...classes) {
@@ -107,7 +107,7 @@ export default function Navbar({ fixed }) {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="/profile"
+                            href="/"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Your Profile
@@ -127,7 +127,7 @@ export default function Navbar({ fixed }) {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="/login"
+                            href="/"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Sign out

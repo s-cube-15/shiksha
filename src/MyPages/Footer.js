@@ -1,8 +1,7 @@
 import React from 'react'
 import { FaLinkedin,FaFacebookSquare,FaInstagramSquare,FaTwitterSquare } from "react-icons/fa";
 import {Link,NavLink} from "react-router-dom"
-import logo from '.././images/blacklogo.png'
-import logo1 from '.././images/blacklogomirror.png'
+import logo from '.././images/giggle.png'
 
 const Footer = () => {
   return (
@@ -56,11 +55,10 @@ const Footer = () => {
 <>
 <footer className="footer p-10 bg-base-200 text-base-content">
   <div>
-    <span className="footer-title">Services</span> 
-    <a className="link link-hover">Courses</a> 
-    <a className="link link-hover">Teaching</a> 
-    <a className="link link-hover" href=''>Assessments</a> 
-    <a className="link link-hover">Materials</a>
+    <span className="footer-title">Process</span> 
+    <a className="link link-hover" href='https://colab.research.google.com/drive/1v_ZBpHbeaApv6pvO4OqUPq-btrdZt6rM?usp=sharing'>Model</a> 
+    <a className="link link-hover">Algorithms</a> 
+    <a className="link link-hover" href='https://github.com/MansiBellani/Laughter-Detection-Model'>Resources</a> 
   </div> 
   <div>
     <span className="footer-title">Company</span> 
@@ -70,15 +68,13 @@ const Footer = () => {
   </div> 
   <div>
     <span className="footer-title">Legal</span> 
-    <a className="link link-hover">Terms of use</a> 
-    <a className="link link-hover">Privacy policy</a> 
-    <a className="link link-hover">Cookie policy</a>
+    <a className="link link-hover" href='https://drive.google.com/file/d/1kZ8kNafqA8M0p_OPAvgSsGrr8FlN132P/view?usp=share_link'>Research Paper</a> 
+    <a className="link link-hover">Privacy policy</a>
   </div>
 </footer> 
 <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
   <div className="items-center grid-flow-col">
     <img className="h-8" src={logo} alt='logo'/>
-    <p>Empowering Abilities,<br/> Unlocking Potential: Education for All</p><img className="h-8" src={logo1} alt='logo mirror'/>
   </div> 
   <div className="md:place-self-center md:justify-self-end">
     <div className="grid grid-flow-col gap-4">

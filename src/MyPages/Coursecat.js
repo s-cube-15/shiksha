@@ -3,15 +3,13 @@ import Catalogue from "../MyComponents/Catalogue";
 import Footer from './../MyPages/Footer';
 import Header from './../MyComponents/Header';
 import { NavLink } from 'react-router-dom';
-import bg from './../images/coursecatbg.png'
-import Banner from './../MyComponents/banner';
+import bg from './../images/course.png'
 
 
 function Coursecat() {
   return (
     <div>
       <Header/>
-      <Banner/>
       <div>
         <img src={bg} alt="bg" width={"100%"} height="400" class="acc1"></img>
         <div class="position-relative"></div>
