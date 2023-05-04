@@ -17,7 +17,7 @@ const Hero = () => {
     <Header/>
     <div>
      <Carousel slide={false}>
-     <Carousel.Item>
+     {/* <Carousel.Item>
       <video
               controls
               loop
@@ -28,6 +28,13 @@ const Hero = () => {
                 width: '100%',
               }}
             ></video>
+      </Carousel.Item> */}
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={vid1}
+          alt="Intro slide"
+        />
       </Carousel.Item>
       <Carousel.Item>
         <img
