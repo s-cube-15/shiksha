@@ -8,7 +8,7 @@ import { Carousel } from 'react-bootstrap';
 import img1 from './../images/cimg1.png';
 import img2 from './../images/cimg2.png';
 import img3 from './../images/cimg3.png';
-import vid1 from './../images/welcome.mp4';
+import vid1 from './../images/shikshaIntro.gif';
 
 const Hero = () => {  
   return (
