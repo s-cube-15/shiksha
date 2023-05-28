@@ -57,22 +57,22 @@ const Footer = () => {
 <footer className="footer p-10 bg-base-200 text-base-content">
   <div>
     <span className="footer-title">Services</span> 
-    <a className="link link-hover">Courses</a> 
-    <a className="link link-hover">Teaching</a> 
-    <a className="link link-hover" href=''>Assessments</a> 
-    <a className="link link-hover">Materials</a>
+    <a className="hover:bg-slate-300" href='/coursecat'>Courses</a> 
+    <a className="hover:bg-slate-300" href='/'>Teaching</a> 
+    <a className="hover:bg-slate-300" href='/'>Assessments</a> 
+    <a className="hover:bg-slate-300" href='/'>Materials</a>
   </div> 
   <div>
     <span className="footer-title">Company</span> 
-    <a className="link link-hover" href='/aboutus'>About us</a> 
-    <a className="link link-hover">Contact</a> 
-    <a className="link link-hover" href='/popup'>Guide</a> 
+    <a className=" hover:bg-slate-300" href='/aboutus'>About us</a> 
+    <a className="hover:bg-slate-300" href=''>Contact</a> 
+    <a className="hover:bg-slate-300" href='/popup'>Guide</a> 
   </div> 
   <div>
     <span className="footer-title">Legal</span> 
-    <a className="link link-hover">Terms of use</a> 
-    <a className="link link-hover">Privacy policy</a> 
-    <a className="link link-hover">Cookie policy</a>
+    <a className="hover:bg-slate-300" href=''>Terms of use</a> 
+    <a className="hover:bg-slate-300" href=''>Privacy policy</a> 
+    <a className="hover:bg-slate-300" href=''>Cookie policy</a>
   </div>
 </footer> 
 <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
