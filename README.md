@@ -1,3 +1,5 @@
+<img src = "/cimg.png" />
+
 ## Screenshots (Home)
 <img src = "src/images/ss/ss1.png" />
 <img src = "src/images/ss/ss2.png" />
