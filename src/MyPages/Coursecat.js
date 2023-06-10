@@ -1,5 +1,6 @@
 import React from "react";
 import Catalogue from "../MyComponents/Catalogue";
+import SubjectCards from "../MyComponents/SubjectCards";
 import Footer from './../MyPages/Footer';
 import Header from './../MyComponents/Header';
 import { NavLink } from 'react-router-dom';
@@ -23,7 +24,8 @@ function Coursecat() {
           
         </div>
       </div>
-      <Catalogue />
+      <SubjectCards/>
+      {/* <Catalogue /> */}
       <Footer/>
     </div>
   );

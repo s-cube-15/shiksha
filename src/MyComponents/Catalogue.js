@@ -40,7 +40,7 @@ function Catalogue() {
             <h5 class="card-title fs-4">Environmental Science-1</h5>
             <button onClick={() => speak({ text: evs })}>
         <img src={vol} alt="volume"></img>
-      </button>
+        </button>
             <p class="card-text p-2">
             12 lessons • 7 quiz
             </p>
@@ -59,7 +59,7 @@ function Catalogue() {
           <div className="card-body text-gray-500 font-semibold bg-sky-200 ">
             <h5 class="card-title fs-4">Environmental Science-2</h5><button onClick={() => speak({ text: evs2 })}>
         <img src={vol} alt="volume"></img>
-      </button>
+        </button>
             <p class="card-text p-2">
             12 lessons • 7 quiz
             </p>
@@ -170,16 +170,16 @@ function Catalogue() {
             </a>
           </div>
         </div>
-        {/* <div className="card lg:card-side bg-base-100 shadow-xl">
-  <figure><img src="/evs.png" className='h-80' alt="Album"/></figure>
-  <div className="card-body">
-    <h2 className="card-title">New album is released!</h2>
-    <p>Click the button to listen on Spotiwhy app.</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Listen</button>
-    </div>
-  </div>
-</div> */}
+              {/* <div className="card lg:card-side bg-base-100 shadow-xl">
+        <figure><img src="/evs.png" className='h-80' alt="Album"/></figure>
+        <div className="card-body">
+          <h2 className="card-title">New album is released!</h2>
+          <p>Click the button to listen on Spotiwhy app.</p>
+          <div className="card-actions justify-end">
+            <button className="btn btn-primary">Listen</button>
+          </div>
+        </div>
+      </div> */}
       </div>
     </div>
   );
