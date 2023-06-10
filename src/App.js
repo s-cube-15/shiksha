@@ -101,7 +101,7 @@ function App() {
 </div> */}
 
    <Routes>
-    <Route path="/" element={<Hero/> } />
+    <Route path="/" element={<Login/> } />
     <Route path="/home" element={<Hero/> } />
     <Route path="/coursecat" element={<Coursecat/>} />
     {/* <Route path="/syllabus" element={<Syllabus/>} /> */}
