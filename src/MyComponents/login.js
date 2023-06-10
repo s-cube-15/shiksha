@@ -1,16 +1,15 @@
 import "../App.css"; 
 import Header from './../MyComponents/Header';
 import { useSpeechSynthesis } from "react-speech-kit";
-
-
 import { 
   getAuth, 
   createUserWithEmailAndPassword, 
   signInWithEmailAndPassword, 
 } from "firebase/auth"; 
 import app from "../firebase"; 
-import { useState } from "react"; 
+import { useState, useEffect } from "react"; 
 import { LockClosedIcon } from '@heroicons/react/20/solid'
+import { useNavigate } from "react-router";
 import logo from './../images/bluelogo.png'
  
 function Login() { 
@@ -22,6 +21,7 @@ function Login() {
   const signin = 'Sign In'
   const [email, setEmail] = useState(""); 
   const [password, setPassword] = useState(""); 
+  const navigate = useNavigate();
  
   const signUp = () => { 
     createUserWithEmailAndPassword(auth, email, password) 
@@ -29,6 +29,7 @@ function Login() {
         // Signed in 
         const user = userCredential.user; 
         console.log(user); 
+        
         alert("Successfully created an account"); 
         // ... 
       }) 
@@ -39,6 +40,7 @@ function Login() {
         // .. 
       }); 
   }; 
+
   const signIn = () => { 
     signInWithEmailAndPassword(auth, email, password) 
       .then((userCredential) => { 
@@ -46,6 +48,7 @@ function Login() {
         const user = userCredential.user; 
         console.log(user); 
         alert("You are now signed in"); 
+        
         // ... 
       }) 
       .catch((error) => { 
@@ -55,6 +58,13 @@ function Login() {
       }); 
       
   }; 
+  useEffect(() => {
+    if (createUserWithEmailAndPassword || signInWithEmailAndPassword) {
+      navigate("/home");
+    } else {
+      alert("Error!!");
+    }
+  }, []);
   
  
   return ( 

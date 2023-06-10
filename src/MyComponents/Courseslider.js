@@ -43,22 +43,22 @@ const subjects = [
     name: 'Science',
     description: '',
     imageSrc: sci,
-    imageAlt: 'Scince image',
-    href: '#',
+    imageAlt: 'Science image',
+    href: '/coursecat',
   },
   {
     name: 'Mathematics',
     description: '',
     imageSrc: math,
-    imageAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
-    href: '#',
+    imageAlt: '',
+    href: '/coursecat',
   },
   {
     name: 'English',
     description: '',
     imageSrc: eng,
-    imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
-    href: '#',
+    imageAlt: '',
+    href: '/coursecat',
   },
 ]
 
