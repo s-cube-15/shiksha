@@ -1,5 +1,6 @@
 import './App.css';
 import './index.css';
+import './mic.css';
 import Header from './MyComponents/Header';
 import Home from './MyPages/Home';
 import Hero from './MyPages/Hero';
@@ -17,7 +18,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import  Videos  from './MyComponents/Videos';
 import Sidebarvideo from './MyComponents/Sidebarvideos';
 import { useTranslation } from 'react-i18next'
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
@@ -26,40 +27,95 @@ import Login from './MyComponents/login'
 import Popup from './MyComponents/popup'
 import Banner from './MyComponents/banner'
 import Profile from './MyPages/profile'
-
-// Contains the value and text for the options
-const languages = [
-    { value: '', text: "Options" },
-    { value: 'en', text: "English" },
-    { value: 'hi', text: "Hindi" },
-    { value: 'mr', text: "Marathi" }
-]
-
+import Science from './MyPages/Science'
+import Math from './MyPages/Math'
+import vol from "./images/volume.png"
+import VoiceNav from "./MyComponents/VoiceNav"
 
 function App() {
+  // const commands = [
+  //   {
+  //     command: ["Go to * page", "Go to *", "Open * page", "Open *"],
+  //     callback: (redirectPage) => setRedirectUrl(redirectPage),
+  //   },
+  // ];
+  
   const commands = [
     {
-      command: ["Go to * page", "Go to *", "Open * page", "Open *"],
-      callback: (redirectPage) => setRedirectUrl(redirectPage),
+      command: "open *",
+      callback: (website) => {
+        window.open("http://shikshaedu.vercel.app/" + website.split(" ").join(""));
+      },
+    },
+    {
+      command: "go to *",
+      callback: (website) => {
+        window.open("http://shikshaedu.vercel.app/" + website.split(" ").join(""));
+      },
+    },
+    {
+      command: "open courses",
+      callback: (website) => {
+        window.open("http://shikshaedu.vercel.app/coursecat");
+      },
+    },
+    {
+      command: "enroll for *",
+      callback: (website) => {
+        window.open("http://shikshaedu.vercel.app/videos");
+      },
+    },
+    {
+      command: "reset",
+      callback: () => {
+        handleReset();
+      },
+    },
+    {
+      command: "stop",
+      callback: () => {
+        stopHandle();
+      },
     },
   ];
-  
-  (function(d, w, c) {
-    w.ChatraID = '5vCLi7r4tiubquMC9';
-    var s = d.createElement('script');
-    w[c] = w[c] || function() {
-        (w[c].q = w[c].q || []).push(arguments);
-    };
-    s.async = true;
-    s.src = 'https://call.chatra.io/chatra.js';
-    if (d.head) d.head.appendChild(s);
-})(document, window, 'Chatra');
 
-  const { transcript } = useSpeechRecognition({ commands });
-  const [redirectUrl, setRedirectUrl] = useState("");
-  if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
-    return null
-  }
+  const { transcript, resetTranscript } = useSpeechRecognition({ commands });
+  const [isListening, setIsListening] = useState(false);
+  const microphoneRef = useRef(null);
+  const handleListing = () => {
+    setIsListening(true);
+    microphoneRef.current.classList.add("listening");
+    SpeechRecognition.startListening({
+      continuous: true,
+    });
+  };
+  const stopHandle = () => {
+    setIsListening(false);
+    microphoneRef.current.classList.remove("listening");
+    SpeechRecognition.stopListening();
+  };
+  const handleReset = () => {
+    stopHandle();
+    resetTranscript();
+  };
+
+
+//   (function(d, w, c) {
+//     w.ChatraID = '5vCLi7r4tiubquMC9';
+//     var s = d.createElement('script');
+//     w[c] = w[c] || function() {
+//         (w[c].q = w[c].q || []).push(arguments);
+//     };
+//     s.async = true;
+//     s.src = 'https://call.chatra.io/chatra.js';
+//     if (d.head) d.head.appendChild(s);
+// })(document, window, 'Chatra');
+
+  // const { transcript } = useSpeechRecognition({ commands });
+  // const [redirectUrl, setRedirectUrl] = useState("");
+  // if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
+  //   return null
+  // }
   const pages = ["home", "about", "course", "profile"];
   const urls = {
     home: "/",
@@ -68,38 +124,20 @@ function App() {
     profile: "/ngoenroll",
   };
 
-  let redirect = "";
+  // let redirect = "";
 
-  if (redirectUrl) {
-    if (pages.includes(redirectUrl)) {
-      redirect = <Navigate to={urls[redirectUrl]} />;
-    } else {
-      redirect = <p>Could not find page: {redirectUrl}</p>;
-    }
-  }
+  // if (redirectUrl) {
+  //   if (pages.includes(redirectUrl)) {
+  //     redirect = <Navigate to={urls[redirectUrl]} />;
+  //   } else {
+  //     redirect = <p>Could not find page: {redirectUrl}</p>;
+  //   }
+  // }
   return (
   
    <Router>
-    {/* <Navigate to="/home" replace={true} /> */}
-    {/* <p>{t("welcome_msg")}</p> */}
    <div className='App'>
-   {/* <Header/> */}
-  {/* <Hero/> */}
-   {/* <Footer/> */}
-   {/* <Hero/> */}
-   {/* {<Lmdash/>} */}
-   {/* {<Instructorsidebar/>} */}
-   {/* <div className="App">
-  <label>{t('choose')}</label>
-
-  <select value={lang} onChange={handleChange}>
-      {languages.map(item => {
-          return (<option key={item.value} 
-          value={item.value}>{item.text}</option>);
-      })}
-  </select>
-</div> */}
-
+    <VoiceNav/>
    <Routes>
     <Route path="/" element={<Login/> } />
     <Route path="/home" element={<Hero/> } />
@@ -118,7 +156,8 @@ function App() {
     <Route path="/leaders" element={<Lead/>}/>
     <Route path="/profile" element={<Profile/>}/>
     <Route path="/banner" element={<Banner/>}/>
-    {redirect}
+    <Route path="/science" element={<Science/>}/>
+    <Route path="/math" element={<Math/>}/>
   
   </Routes>
    </div>

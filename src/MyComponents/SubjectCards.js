@@ -5,6 +5,7 @@ import sci from "./../images/sci.png";
 import eng from "./../images/eng.png";
 import { Link } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 // function myChange(str) {
 //     var arr = str.split('');
@@ -27,6 +28,7 @@ function braille() {
 
 export default function SubjectCards() {
   // const [title, setTitle] = useState("Tanslate");
+  const navigate = useNavigate();
   const [buttonText, setButtonText] = useState("Translate To Braille");
 
   function handleClick() {
@@ -66,7 +68,7 @@ export default function SubjectCards() {
                   natural phenomena, conducting experiments, and making
                   observations.
                 </p>
-                <p>
+                {/* <p>
                   <button
                     className="btn btn-outline-secondary mt-2 mb-2"
                     type="button"
@@ -83,16 +85,14 @@ export default function SubjectCards() {
                   <div class="card card-body ">
                   {buttonText}
                   </div>
-                </div>
+                </div> */}
                 {/* <button className="btn btn-outline  btn-secondary text-white" type="button" onClick={braille}>Translate To Braille</button> */}
-                {/* <button
-                  className="btn btn-outline btn-secondary text-white self-center w-[80%] lg:w-[30%] mt-2 mb-2"
+                <button
+                  className="btn btn-outline-secondary self-start w-[80%] lg:w-[30%] mt-2 mb-2"
                   type="button"
-                  onClick={handleClick}
-                >
-                  {buttonText}
-                </button> */}
-                {/* <Toaster /> */}
+                  onClick={() => navigate("/science")}>
+                    Go To Course
+                </button>
                 <p class="text-sm text-gray-700 uppercase tracking-wide font-semibold mt-1">
                   REV-2019'C' Scheme
                 </p>
@@ -121,7 +121,7 @@ export default function SubjectCards() {
                   natural phenomena, conducting experiments, and making
                   observations.
                 </p>
-                <p>
+                {/* <p>
                   <button
                     className="btn btn-outline-secondary mt-2 mb-2"
                     type="button"
@@ -138,7 +138,13 @@ export default function SubjectCards() {
                   <div class="card card-body ">
                   {buttonText}
                   </div>
-                </div>
+                </div> */}
+                <button
+                  className="btn btn-outline-secondary self-start w-[80%] lg:w-[30%] mt-2 mb-2"
+                  type="button"
+                  onClick={() => navigate("/math")}>
+                    Go To Course
+                </button>
                 <p class="text-sm text-gray-700 uppercase tracking-wide font-semibold mt-1">
                   REV-2019'C' Scheme
                 </p>
