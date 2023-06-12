@@ -1,11 +1,10 @@
 import React from "react";
-import {useState, useRef} from "react";
+import { useState, useRef } from "react";
 import math from "./../images/maths.png";
 import sci from "./../images/sci.png";
 import eng from "./../images/eng.png";
 import { Link } from "react-router-dom";
-import toast, { Toaster } from 'react-hot-toast';
-
+import toast, { Toaster } from "react-hot-toast";
 
 // function myChange(str) {
 //     var arr = str.split('');
@@ -13,36 +12,42 @@ import toast, { Toaster } from 'react-hot-toast';
 //     for(var i=0; i < arr.length; i++) {
 //         if (arr[i] == 'o')  // if it's an o
 //             result += 'u';  // replace it with 'u'
-//         else 
+//         else
 //             result += arr[i];
 //     }
 // return(result);
 // }
 
-function braille(){
-    var br = require('braille');
-    var code = br.toBraille('example');
-    console.log(code);
-    toast("Braille \n" + code);
+function braille() {
+  var br = require("braille");
+  var code = br.toBraille("this is in braille");
+  console.log(code);
+  toast("Braille \n" + code);
 }
 
-
 export default function SubjectCards() {
-// const [title, setTitle] = useState("Tanslate");
+  // const [title, setTitle] = useState("Tanslate");
+  const [buttonText, setButtonText] = useState("Translate To Braille");
 
+  function handleClick() {
+    var br = require("braille");
+    var code = br.toBraille("this line is in braille");
+    console.log(code);
+    // toast("Braille \n" + code);
+    setButtonText(code);
+  }
   return (
     <>
       <div class="pt-6 pb-12 bg-gray-300">
         <div id="card" class="mr-4">
-          <h2 class="text-center font-serif  uppercase text-4xl xl:text-5xl">
+          <h2 class="text-center font-serif uppercase text-4xl xl:text-5xl">
             SUBJECTS
           </h2>
 
           <div class="container w-96 lg:w-4/5 mx-auto flex flex-col">
             <div
               v-for="card in cards"
-              class="flex flex-col md:flex-row overflow-hidden
-                                        bg-white rounded-lg shadow-xl  mt-4 w-100 mx-2"
+              class="flex flex-col md:flex-row overflow-hidden bg-white rounded-lg shadow-xl  mt-4 w-100 mx-2"
             >
               <div class="h-64 w-auto md:w-1/2">
                 <img
@@ -61,7 +66,33 @@ export default function SubjectCards() {
                   natural phenomena, conducting experiments, and making
                   observations.
                 </p>
-                <button className="btn btn-outline  btn-secondary text-white" type="button" onClick={braille}>Translate To Braille</button><Toaster />
+                <p>
+                  <button
+                    className="btn btn-outline-secondary mt-2 mb-2"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample"
+                    aria-expanded="false"
+                    aria-controls="collapseExample"
+                    onClick={handleClick}
+                  >
+                    Translate In Braille
+                  </button>
+                </p>
+                <div class="collapse mt-2" id="collapseExample">
+                  <div class="card card-body ">
+                  {buttonText}
+                  </div>
+                </div>
+                {/* <button className="btn btn-outline  btn-secondary text-white" type="button" onClick={braille}>Translate To Braille</button> */}
+                {/* <button
+                  className="btn btn-outline btn-secondary text-white self-center w-[80%] lg:w-[30%] mt-2 mb-2"
+                  type="button"
+                  onClick={handleClick}
+                >
+                  {buttonText}
+                </button> */}
+                {/* <Toaster /> */}
                 <p class="text-sm text-gray-700 uppercase tracking-wide font-semibold mt-1">
                   REV-2019'C' Scheme
                 </p>
@@ -69,12 +100,10 @@ export default function SubjectCards() {
             </div>
           </div>
 
-
           <div class="container w-96 lg:w-4/5 mx-auto flex flex-col">
             <div
               v-for="card in cards"
-              class="flex flex-col md:flex-row overflow-hidden
-                                        bg-white rounded-lg shadow-xl  mt-4 w-100 mx-2"
+              class="flex flex-col md:flex-row overflow-hidden bg-white rounded-lg shadow-xl  mt-4 w-100 mx-2"
             >
               <div class="h-64 w-auto md:w-1/2">
                 <img
@@ -91,7 +120,25 @@ export default function SubjectCards() {
                   Science helps us understand the world around us by exploring
                   natural phenomena, conducting experiments, and making
                   observations.
-                </p><button className="btn btn-outline  btn-secondary text-white" type="button" onClick={braille}>Translate To Braille</button><Toaster />
+                </p>
+                <p>
+                  <button
+                    className="btn btn-outline-secondary mt-2 mb-2"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample"
+                    aria-expanded="false"
+                    aria-controls="collapseExample"
+                    onClick={handleClick}
+                  >
+                    Translate In Braille
+                  </button>
+                </p>
+                <div class="collapse mt-2" id="collapseExample">
+                  <div class="card card-body ">
+                  {buttonText}
+                  </div>
+                </div>
                 <p class="text-sm text-gray-700 uppercase tracking-wide font-semibold mt-1">
                   REV-2019'C' Scheme
                 </p>
@@ -99,12 +146,10 @@ export default function SubjectCards() {
             </div>
           </div>
 
-
           <div class="container w-96 lg:w-4/5 mx-auto flex flex-col">
             <div
               v-for="card in cards"
-              class="flex flex-col md:flex-row overflow-hidden
-                                        bg-white rounded-lg shadow-xl  mt-4 w-100 mx-2"
+              class="flex flex-col md:flex-row overflow-hidden bg-white rounded-lg shadow-xl  mt-4 w-100 mx-2"
             >
               <div class="h-64 w-auto md:w-1/2">
                 <img
@@ -121,7 +166,25 @@ export default function SubjectCards() {
                   Science helps us understand the world around us by exploring
                   natural phenomena, conducting experiments, and making
                   observations.
-                </p><button className="btn btn-outline  btn-secondary text-white" type="button" onClick={braille}>Translate To Braille</button><Toaster />
+                </p>
+                <p>
+                  <button
+                    className="btn btn-outline-secondary mt-2 mb-2"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample"
+                    aria-expanded="false"
+                    aria-controls="collapseExample"
+                    onClick={handleClick}
+                  >
+                    Translate In Braille
+                  </button>
+                </p>
+                <div class="collapse mt-2" id="collapseExample">
+                  <div class="card card-body ">
+                  {buttonText}
+                  </div>
+                </div>
                 <p class="text-sm text-gray-700 uppercase tracking-wide font-semibold mt-1">
                   REV-2019'C' Scheme
                 </p>

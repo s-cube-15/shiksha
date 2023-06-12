@@ -2,7 +2,7 @@ import './App.css';
 import './index.css';
 import Header from './MyComponents/Header';
 import Home from './MyPages/Home';
-import Hero from './MyPages/Hero';            
+import Hero from './MyPages/Hero';
 import Coursecat from './MyPages/Coursecat';
 import Aboutus from './MyPages/Aboutus';
 import Donation from './MyPages/Donation';
