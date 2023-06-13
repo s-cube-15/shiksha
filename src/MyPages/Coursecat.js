@@ -12,7 +12,6 @@ function Coursecat() {
   return (
     <div>
       <Header/>
-      <Banner/>
       <div>
         <img src={bg} alt="bg" width={"100%"} height="400" class="acc1"></img>
         <div class="position-relative"></div>

@@ -1,13 +1,11 @@
 import React from "react";
-import MathCatalogue from "../MyComponents/MathCatalogue";
-import SubjectCards from "../MyComponents/SubjectCards";
+import EnglishCatalogue from "../MyComponents/EnglishCatalogue";
 import Footer from './Footer';
 import Header from '../MyComponents/Header';
 import { NavLink } from 'react-router-dom';
-import bg from './../images/mathimg.gif'
-import Banner from '../MyComponents/banner';
+import bg from './../images/engimg.gif';
 
-function Math() {
+function English() {
   return (
     <div>
       <Header/>
@@ -22,10 +20,10 @@ function Math() {
           
         </div>
       </div>
-      <MathCatalogue />
+      <EnglishCatalogue />
       <Footer/>
     </div>
   );
 }
 
-export default Math;
+export default English;
