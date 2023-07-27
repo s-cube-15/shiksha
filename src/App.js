@@ -100,40 +100,6 @@ function App() {
     resetTranscript();
   };
 
-
-//   (function(d, w, c) {
-//     w.ChatraID = '5vCLi7r4tiubquMC9';
-//     var s = d.createElement('script');
-//     w[c] = w[c] || function() {
-//         (w[c].q = w[c].q || []).push(arguments);
-//     };
-//     s.async = true;
-//     s.src = 'https://call.chatra.io/chatra.js';
-//     if (d.head) d.head.appendChild(s);
-// })(document, window, 'Chatra');
-
-  // const { transcript } = useSpeechRecognition({ commands });
-  // const [redirectUrl, setRedirectUrl] = useState("");
-  // if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
-  //   return null
-  // }
-  // const pages = ["home", "about", "course", "profile"];
-  // const urls = {
-  //   home: "/",
-  //   about: "/aboutus",
-  //   course: "/coursecat",
-  //   profile: "/ngoenroll",
-  // };
-
-  // let redirect = "";
-
-  // if (redirectUrl) {
-  //   if (pages.includes(redirectUrl)) {
-  //     redirect = <Navigate to={urls[redirectUrl]} />;
-  //   } else {
-  //     redirect = <p>Could not find page: {redirectUrl}</p>;
-  //   }
-  // }
   return (
   
    <Router>

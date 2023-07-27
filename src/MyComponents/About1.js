@@ -17,26 +17,26 @@ const people = [
     name: 'Aayush Talreja',
     role: 'Founder / CEO',
     imageUrl:
-      'https://media.licdn.com/dms/image/C4D03AQGjVJnZjakikg/profile-displayphoto-shrink_200_200/0/1657648501282?e=1685577600&v=beta&t=GZVLCtCI6mAVh0T4uTBJODcNWased_DRS3pxg73A7Vk',
+      'https://media.licdn.com/dms/image/C4D03AQGjVJnZjakikg/profile-displayphoto-shrink_200_200/0/1657648501282?e=1695859200&v=beta&t=D6udgrbQuZILkvEz8syBDI5AuI6kDFMCGb3DJuztZCM',
       
   },
   {
     name: 'Mansi Bellani',
     role: 'Co-Founder / CIO',
     imageUrl:
-      'https://media.licdn.com/dms/image/D4D03AQG3tgMaLVMfug/profile-displayphoto-shrink_100_100/0/1666875030217?e=1685577600&v=beta&t=vfoT736oR7cZXkuDcl9J6ZSnJIOaJzpkaJ1D-Y6qh_0',
+      'https://media.licdn.com/dms/image/D4D03AQF_sjSz2esQWA/profile-displayphoto-shrink_100_100/0/1689216851927?e=1695859200&v=beta&t=PcC2gr_o7cAiThV_uHFBsv3K_udJjZjd2d2scy55nfc',
   },
   {
     name: 'Niranjan Yeole',
     role: 'CFO',
     imageUrl:
-      'https://media.licdn.com/dms/image/C4E03AQFMaAxosx5O8A/profile-displayphoto-shrink_100_100/0/1642847850390?e=1685577600&v=beta&t=LDCn4WpFeU6vUMdAP6e9nQf4Cdz4DNs6zvy52GHkwVI',
+      'https://media.licdn.com/dms/image/C4E03AQFMaAxosx5O8A/profile-displayphoto-shrink_100_100/0/1642847850390?e=1695859200&v=beta&t=nUjDR1YwYcLXZ7Qjxx7jPxPVPSYupqjHXzIGXWoVvGU',
   },
   {
     name: 'Anuj Bagad',
     role: 'COO',
     imageUrl:
-      'https://media.licdn.com/dms/image/C4D03AQG7ln3Kb53VZA/profile-displayphoto-shrink_100_100/0/1641273867979?e=1685577600&v=beta&t=QRlrRpePXwAuUynmY0zhCahF2ZU4cKns6uUqbDMdIZE',
+      'https://media.licdn.com/dms/image/C4D03AQG7ln3Kb53VZA/profile-displayphoto-shrink_100_100/0/1641273867979?e=1695859200&v=beta&t=La4q8Eg25kwPNzgMgDugEziMUXBECbFoAVDxSACt8pg',
     
   },
 ]
@@ -52,8 +52,8 @@ function About1() {
     //     </div>
     //     {/* <p class=" text-dark position-absolute top-100 start-50 translate-middle ">Our aim is to provide equal opportunity of Education to everyone irrespective of their gender identity.To accept them as an individual with due respect and acceptability, free from any social stigma or prejudices and above all to respect HUMANITY.</p> */}
     //   </div>
-      <div className="relative  overflow-hidden bg-gray-900 py-35 sm:py-40">
-      <img className="bg-gradient-to-t absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center" />
+      <div className="relative overflow-hidden bg-gray-900 py-35 sm:py-40">
+      <img className="absolute inset-0 object-cover object-right w-full h-full bg-gradient-to-t -z-10 md:object-center" />
       <svg
         viewBox="0 0 1097 845"
         aria-hidden="true"
@@ -102,23 +102,23 @@ function About1() {
           </linearGradient>
         </defs>
       </svg>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className=" max-w-2xl lg:mx-0">
+      <div className="px-6 mx-auto max-w-7xl lg:px-8">
+        <div className="max-w-2xl lg:mx-0">
           <h2 className="text-4xl font-bold tracking-tight text-blue-500 sm:text-6xl">OUR VISION</h2>
           <p className="mt-6 text-lg leading-8 text-white">
           Our aim is to provide equal opportunity of Education to everyone
           irrespective of their disability.
           </p>
         </div>
-        <div className="ml-8 mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-          <div className="grid grid-cols-1 gap-y-6 gap-x-8 text-base font-semibold leading-7 text-blue-500 sm:grid-cols-2 md:flex lg:gap-x-10">
+        <div className="max-w-2xl mx-auto mt-10 ml-8 lg:mx-0 lg:max-w-none">
+          <div className="grid grid-cols-1 text-base font-semibold leading-7 text-blue-500 gap-y-6 gap-x-8 sm:grid-cols-2 md:flex lg:gap-x-10">
             {links.map((link) => (
               <a key={link.name} href={link.href}>
                 {link.name} <span aria-hidden="true">&rarr;</span>
               </a>
             ))}
           </div>
-          <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+          <dl className="grid grid-cols-1 gap-8 mt-16 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.name} className="flex flex-col-reverse">
                 <dt className="text-base leading-7 text-blue-500">{stat.name}</dt>
@@ -131,8 +131,8 @@ function About1() {
 
       {/* Leadership */}
 
-      <div className="bg-gradient-to-t py-24 sm:py-32 mt-40" id="leadership">
-        <div className="mx-auto grid max-w-7xl gap-y-20 gap-x-8 px-6 lg:px-8 xl:grid-cols-3">
+      <div className="py-24 mt-40 bg-gradient-to-t sm:py-32" id="leadership">
+        <div className="grid px-6 mx-auto max-w-7xl gap-y-20 gap-x-8 lg:px-8 xl:grid-cols-3">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-bold tracking-tight text-gray-300 sm:text-4xl">Meet our leadership</h2>
             <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -144,7 +144,7 @@ function About1() {
             {people.map((person) => (
               <li key={person.name}>
                 <div className="flex items-center gap-x-6">
-                  <img className="h-25 w-25 rounded-full" src={person.imageUrl} alt="" />
+                  <img className="rounded-full h-25 w-25" src={person.imageUrl} alt="" />
                   <div>
                     <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-300">{person.name}</h3>
                     <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>
