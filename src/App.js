@@ -32,6 +32,8 @@ import Math from './MyPages/Math'
 import English from './MyPages/English'
 import vol from "./images/volume.png"
 import VoiceNav from "./MyComponents/VoiceNav"
+import { inject } from '@vercel/analytics';
+inject();
 
 function App() {
   // const commands = [

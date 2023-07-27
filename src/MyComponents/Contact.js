@@ -46,7 +46,7 @@ const Contact = () => {
 </section>
     </form>
 
-    //create a form with 3 input fields and a submit button and use firebase 
+    //create a form with 3 input fields and a submit button and use firebase  
   )
 }
 
