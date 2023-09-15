@@ -21,22 +21,22 @@ const people = [
       
   },
   {
-    name: 'Mansi Bellani',
-    role: 'Co-Founder / CIO',
+    name: 'Sudhanshu Sabale',
+    role: 'Co-Founder / CTO',
     imageUrl:
-      'https://media.licdn.com/dms/image/D4D03AQF_sjSz2esQWA/profile-displayphoto-shrink_100_100/0/1689216851927?e=1695859200&v=beta&t=PcC2gr_o7cAiThV_uHFBsv3K_udJjZjd2d2scy55nfc',
+      'https://media.licdn.com/dms/image/D4D03AQGGyi7iO4NFKw/profile-displayphoto-shrink_100_100/0/1679249654187?e=1700092800&v=beta&t=52x6MXU8vQmG6xyf4d9VXrZPmZk-eynVeylJu4eqKI4',
   },
   {
-    name: 'Niranjan Yeole',
-    role: 'CFO',
-    imageUrl:
-      'https://media.licdn.com/dms/image/C4E03AQFMaAxosx5O8A/profile-displayphoto-shrink_100_100/0/1642847850390?e=1695859200&v=beta&t=nUjDR1YwYcLXZ7Qjxx7jPxPVPSYupqjHXzIGXWoVvGU',
-  },
-  {
-    name: 'Anuj Bagad',
+    name: 'Anshita Talreja',
     role: 'COO',
     imageUrl:
-      'https://media.licdn.com/dms/image/C4D03AQG7ln3Kb53VZA/profile-displayphoto-shrink_100_100/0/1641273867979?e=1695859200&v=beta&t=La4q8Eg25kwPNzgMgDugEziMUXBECbFoAVDxSACt8pg',
+      'https://www.google.com/url?sa=j&url=https%3A%2F%2Fmedia.licdn.com%2Fdms%2Fimage%2FD5603AQHwd4NbcDAYyA%2Fprofile-displayphoto-shrink_100_100%2F0%2F1682758978080%3Fe%3D1700092800%26v%3Dbeta%26t%3DQ6y7SLBAwemKPD7GNmlbu8OZyIePNlkXzx97cnuBnhg&uct=1688063772&usg=4B7UuPotTsRD-31utpijazDYlZg.&opi=82159412&source=meet',
+  },
+  {
+    name: 'Cheshta Gurbaxani ',
+    role: 'CFO',
+    //imageUrl:
+     // 'https://media.licdn.com/dms/image/C4D03AQG7ln3Kb53VZA/profile-displayphoto-shrink_100_100/0/1641273867979?e=1695859200&v=beta&t=La4q8Eg25kwPNzgMgDugEziMUXBECbFoAVDxSACt8pg',
     
   },
 ]
