@@ -35,8 +35,8 @@ const people = [
   {
     name: 'Cheshta Gurbaxani ',
     role: 'CFO',
-    //imageUrl:
-     // 'https://media.licdn.com/dms/image/C4D03AQG7ln3Kb53VZA/profile-displayphoto-shrink_100_100/0/1641273867979?e=1695859200&v=beta&t=La4q8Eg25kwPNzgMgDugEziMUXBECbFoAVDxSACt8pg',
+    imageUrl:
+      '',
     
   },
 ]
